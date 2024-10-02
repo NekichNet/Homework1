@@ -9,7 +9,7 @@ int main() {
 	int m[20];
 	
 	for (int i = 0; i < 20; i++) {
-		m[i] = std::rand() % 6 + 5;
+		m[i] = std::rand() % 17 - 5;
 		std::cout << m[i] << ' ';
 		if (i == 9) {
 			std::cout << '\n';
