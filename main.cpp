@@ -2,7 +2,7 @@
 #include <Windows.h>
 #include <cstdlib>
 
-void FillList(int* list, int size) {
+void FillList(int list, int size) {
 	for (int i = 0; i < size; i++) {
 		list[i] = rand() % 27 - 8;
 	}
