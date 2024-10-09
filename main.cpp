@@ -2,11 +2,10 @@
 #include <Windows.h>
 #include <cstdlib>
 
-int FillList(int list[], int size) {
+void FillList(int* list, int size) {
 	for (int i = 0; i < size; i++) {
 		list[i] = rand() % 27 - 8;
 	}
-	return list[size];
 }
 
 void PrintList(int list[], int size) {
@@ -19,12 +18,12 @@ void PrintList(int list[], int size) {
 void PrintMinMax(int list[], int size) {
 	int min = 0, max = 0;
 	for (int i = 0; i < size; i++) {
-		if (list[i] < min) { min = list[i]; }
-		if (list[i] > max) { max = list[i]; }
+		if (list[i] < min) { min = i; }
+		if (list[i] > max) { max = i; }
 	}
 	std::cout <<
-		"Min element: " << min <<
-		"\nMax element: " << max << '\n';
+		"Min element ¹" << min + 1 << ": " << list[min] <<
+		"\nMax element ¹" << max + 1 << ": " << list[max] << '\n';
 }
 
 int main() {
